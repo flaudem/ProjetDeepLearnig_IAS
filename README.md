@@ -81,7 +81,7 @@ This newImage is simply a blend of 2 images from your training set, it is that s
 The important thing here, is that you don’t always need to One Hot Encode your target vector. In case you are not doing OneHotEncoding, custom loss function will be required.
 
 * **FixMatch**\
-FixMatch is a semi-supervised learning method that use consistency regularization as cross-entropy between one-hot pseudo-labels of weakly translation applied images and prediction of strongly translated them. It is possible to learn with even a very small amount of labeled data.
+FixMatch is a semi-supervised learning method that use consistency regularization as cross-entropy between one-hot pseudo-labels of weakly translation applied images and prediction of strongly translated them. It is possible to learn with even a very small amount of labeled data.\
 Semi-supervised learning (SSL) is a learning method where learning is performed with a small number of labeled data and a large number of unlabeled data.The biggest advantage against supervised learning is that you do not need to prepare labels for all data.
 
 
