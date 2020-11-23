@@ -61,8 +61,33 @@ The two boxes in the visualization overlap, but the area of the overlap is insub
 
 
 ## Concepts
-* **MixUp**
+* **MixUp**\
+MixUp is a recently proposed method for training deep neural networks(DNN)
+where additional samples are generated during training by convexly combining
+random pairs of images and their associated labels. While simple to implement,
+it has been shown to be a surprisingly effective method of data augmentation
+for image classification: DNNs trained with mixup show noticeable gains in
+classification performance on a number of image classification benchmarks.
+Mixup training is based on the principle of Vicinal Risk Minimization (VRM): the classifier
+is trained not only on the training data, but also in the vicinity of each training sample. 
+MixUp can be represented with this simple equation:
+
+<p align="center"><b>newImage = alpha * image1 + (1-alpha) * image2</b></p>
+
+This newImage is simply a blend of 2 images from your training set, it is that simple! So, what will be the target value for the newImage?
+
+<p align="center"><b>newTarget = alpha * target1 + (1-alpha) * target2</b></p>
+
+The important thing here, is that you don’t always need to One Hot Encode your target vector. In case you are not doing OneHotEncoding, custom loss function will be required.
 
 * **FixMatch**
+In practical settings, labeling data is a time consuming and expensive process. Though, you have a lot of images, only a small portion of them can be labeled due to resource constraints. In such settings, we could wonder:
+***How can we leverage the remaining unlabeled images along with the labeled images to improve the performance of our model***
+The answer lies in a field called semi-supervised learning. FixMatch is a recent semi-supervised approach by Sohn et al. from Google Brain that improved the state of the art in semi-supervised learning(SSL). It is a simpler combination of previous methods such as UDA and ReMixMatch.
+**The FixMatch Pipeline**
+<p align="center"><img src="fixmatch.png" /></p>
+
+For more understanding about FixMatch see : https://amitness.com/2020/03/fixmatch-semi-supervised/
+
 
 * **TTA**
