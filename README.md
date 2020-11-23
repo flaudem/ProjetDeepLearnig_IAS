@@ -80,14 +80,13 @@ This newImage is simply a blend of 2 images from your training set, it is that s
 
 The important thing here, is that you don’t always need to One Hot Encode your target vector. In case you are not doing OneHotEncoding, custom loss function will be required.
 
-* **FixMatch**
-In practical settings, labeling data is a time consuming and expensive process. Though, you have a lot of images, only a small portion of them can be labeled due to resource constraints. In such settings, we could wonder:
-***How can we leverage the remaining unlabeled images along with the labeled images to improve the performance of our model***
-The answer lies in a field called semi-supervised learning. FixMatch is a recent semi-supervised approach by Sohn et al. from Google Brain that improved the state of the art in semi-supervised learning(SSL). It is a simpler combination of previous methods such as UDA and ReMixMatch.
-**The FixMatch Pipeline**
-<p align="center"><img src="fixmatch.png" /></p>
+* **FixMatch**\
+FixMatch is a semi-supervised learning method that use consistency regularization as cross-entropy between one-hot pseudo-labels of weakly translation applied images and prediction of strongly translated them. It is possible to learn with even a very small amount of labeled data.
+Semi-supervised learning (SSL) is a learning method where learning is performed with a small number of labeled data and a large number of unlabeled data.The biggest advantage against supervised learning is that you do not need to prepare labels for all data.
 
-For more understanding about FixMatch see : https://amitness.com/2020/03/fixmatch-semi-supervised/
+
+For more understanding about FixMatch see : https://amitness.com/2020/03/fixmatch-semi-supervised/    or 
+https://medium.com/analytics-vidhya/fixmatch-semi-supervised-learning-method-that-can-be-learned-even-if-there-is-only-one-labeled-e7e1b37e8935
 
 
 * **TTA**
