@@ -1,5 +1,5 @@
 # Global Wheat Detection
-<p align="center"><img src="desc.png" /></p>
+<p align="center"><img src="ProjetDL_images/desc.png" /></p>
 
 ## Description
 Open up your pantry and you’re likely to find several wheat products. Indeed, your morning toast or cereal may rely upon this common grain. Its popularity as a food and crop makes wheat widely studied. To get large and accurate data about wheat fields worldwide, plant scientists use image detection of "wheat heads"—spikes atop the plant containing grain. These images are used to estimate the density and size of wheat heads in different varieties. Farmers can use the data to assess health and maturity when making management decisions in their fields.
@@ -38,17 +38,17 @@ You are attempting to predict bounding boxes around each wheat head in images th
 
 ## Metrics
 This competition is evaluated on the mean average precision at different intersection over union (IoU) thresholds. The IoU of a set of predicted bounding boxes and ground truth bounding boxes is calculated as:
-<p align="center"><img src="m1.png" /></p>
+<p align="center"><img src="ProjetDL_images/m1.png" /></p>
 
 The metric sweeps over a range of IoU thresholds, at each point calculating an average precision value. The threshold values range from 0.5 to 0.75 with a step size of 0.05. In other words, at a threshold of 0.5, a predicted object is considered a "hit" if its intersection over union with a ground truth object is greater than 0.5.
 At each threshold value t, a precision value is calculated based on the number of true positives (TP), false negatives (FN), and false positives (FP) resulting from comparing the predicted object to all ground truth objects:
-<p align="center"><img src="m2.png" /></p>
+<p align="center"><img src="ProjetDL_images/m2.png" /></p>
 
 A true positive is counted when a single predicted object matches a ground truth object with an IoU above the threshold. A false positive indicates a predicted object had no associated ground truth object. A false negative indicates a ground truth object had no associated predicted object.
 
 Important note: if there are no ground truth objects at all for a given image, ANY number of predictions (false positives) will result in the image receiving a score of zero, and being included in the mean average precision.
 The average precision of a single image is calculated as the mean of the above precision values at each IoU threshold:
-<p align="center"><img src="m3.png" /></p>
+<p align="center"><img src="ProjetDL_images/m3.png" /></p>
 
 In your submission, you are also asked to provide a confidence level for each bounding box. Bounding boxes will be evaluated in order of their confidence levels in the above process. This means that bounding boxes with higher confidence will be checked first for matches against solutions, which determines what boxes are considered true and false positives.
 Lastly, the score returned by the competition metric is the mean taken over the individual average precisions of each image in the test dataset.
@@ -56,7 +56,7 @@ Lastly, the score returned by the competition metric is the mean taken over the 
 **Intersection over Union (IoU)**\
 Intersection over Union is a measure of the magnitude of overlap between two bounding boxes (or, in the more general case, two objects). It calculates the size of the overlap between two objects, divided by the total area of the two objects combined.
 It can be visualized as the following:
-<p align="center"><img src="m4.png" /></p>
+<p align="center"><img src="ProjetDL_images/m4.png" /></p>
 The two boxes in the visualization overlap, but the area of the overlap is insubstantial compared with the area taken up by both objects together. IoU would be low - and would likely not count as a "hit" at higher IoU thresholds.
 
 
@@ -83,9 +83,12 @@ The important thing here, is that you don’t always need to One Hot Encode your
 * **FixMatch**\
 FixMatch is a semi-supervised learning method that use consistency regularization as cross-entropy between one-hot pseudo-labels of weakly translation applied images and prediction of strongly translated them. It is possible to learn with even a very small amount of labeled data.\
 Semi-supervised learning (SSL) is a learning method where learning is performed with a small number of labeled data and a large number of unlabeled data.The biggest advantage against supervised learning is that you do not need to prepare labels for all data.
+<p align="center"><img src="ProjetDL_images/fixmatch1.png" /></p>
+
+<p align="center"><img src="ProjetDL_images/fixmatch.png" /></p>
 
 
-For more understanding about FixMatch see : https://amitness.com/2020/03/fixmatch-semi-supervised/    or 
+For more understanding about FixMatch see : https://amitness.com/2020/03/fixmatch-semi-supervised/    **or**\ 
 https://medium.com/analytics-vidhya/fixmatch-semi-supervised-learning-method-that-can-be-learned-even-if-there-is-only-one-labeled-e7e1b37e8935
 
 
