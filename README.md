@@ -93,3 +93,4 @@ https://medium.com/analytics-vidhya/fixmatch-semi-supervised-learning-method-tha
 
 
 * **TTA**
+Similar to what Data Augmentation is doing to the training set, the purpose of Test Time Augmentation(TTA) is to perform random modifications to the test images. Thus, instead of showing the regular, “clean” images, only once to the trained model, we will show it the augmented images several times. We will then average the predictions of each corresponding image and take that as our final guess.
