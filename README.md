@@ -87,8 +87,8 @@ Semi-supervised learning (SSL) is a learning method where learning is performed 
 
 <p align="center"><img src="ProjetDL_images/fixmatch.png" /></p>
 
-
-For more understanding about FixMatch see : https://amitness.com/2020/03/fixmatch-semi-supervised/    **or**\ 
+ 
+For more understanding about FixMatch see : https://amitness.com/2020/03/fixmatch-semi-supervised/ \ 
 https://medium.com/analytics-vidhya/fixmatch-semi-supervised-learning-method-that-can-be-learned-even-if-there-is-only-one-labeled-e7e1b37e8935
 
 
