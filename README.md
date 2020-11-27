@@ -48,7 +48,7 @@ Intersection over Union is a measure of the magnitude of overlap between two bou
 It can be visualized as the following:
 <p align="center"><img src="ProjetDL_images/m4.png" /></p>
 The two boxes in the visualization overlap, but the area of the overlap is insubstantial compared with the area taken up by both objects together. IoU would be low - and would likely not count as a "hit" at higher IoU thresholds.
-<p align="center"><img src="ProjetDL_images/m4.png" /></p>
+<p align="center"><img src="ProjetDL_images/m1.png" /></p>
 
 The two boxes in the visualization overlap, but the area of the overlap is insubstantial compared with the area taken up by both objects together. IoU would be low - and would likely not count as a "hit" at higher IoU thresholds.
 The metric sweeps over a range of IoU thresholds, at each point calculating an average precision value. The threshold values range from 0.5 to 0.75 with a step size of 0.05. In other words, at a threshold of 0.5, a predicted object is considered a "hit" if its intersection over union with a ground truth object is greater than 0.5.
