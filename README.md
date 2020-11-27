@@ -1,3 +1,10 @@
+# DeepLearning Project
+**This work is the solution of the second winner of a kaggle competition that we have included here as part of a student project whose participants are:**
+* Christelle AMOUGOU
+* Thanuja RATNASINGAM
+* Mounif Alade SANNI
+* Flaude BANZA
+
 # Global Wheat Detection
 <p align="center"><img src="ProjetDL_images/desc.png" /></p>
 
