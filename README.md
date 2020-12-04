@@ -28,7 +28,7 @@ Contributors are attempting to predict bounding boxes around each wheat head in 
 * image_id - the unique image ID
 * width, height - the width and height of the images
 * bbox - a bounding box, formatted as a Python-style list of [xmin, ymin, width, height]
-* etc.
+* etc.<br>
 The Global Wheat Head dataset is led by nine research institutes from seven countries: The University of Tokyo, the National Research Institute for Agriculture, Food and the Environment, Arvalis, ETHZ, the University of Saskatchewan, University of Queensland, Nanjing Agricultural University and Rothamsted Research. These institutions are joined by many in their quest to accurately detect wheat ears, including the World Food Security Institute, DigitAg, Kubota and Hiphen. Approximately 3000 images from Europe (France, United Kingdom, Switzerland) and North America (Canada) are used and the test data includes approximately 1000 images from Australia, Japan, and China.
 The data are images of wheat fields, with bounding boxes for each ear of wheat identified. All images do not include the ears of wheat. The images were recorded in many places around the world.<br>
 CSV data is simple - image ID and image width and height are included. There is a line in train.csv for each bounding box. Not all images have bounding boxes.<br>
@@ -98,6 +98,6 @@ For more understanding about FixMatch [follow here](https://amitness.com/2020/03
 [here](https://medium.com/analytics-vidhya/fixmatch-semi-supervised-learning-method-that-can-be-learned-even-if-there-is-only-one-labeled-e7e1b37e8935)
 
 
-* **TTA**
+* **TTA**<br>
 Similar to what Data Augmentation is doing to the training set, the purpose of Test Time Augmentation(TTA) is to perform random modifications to the test images. Thus, instead of showing the regular, “clean” images, only once to the trained model, we will show it the augmented images several times. We will then average the predictions of each corresponding image and take that as our final guess.
 <p align="center"><img src="ProjetDL_images/tta.png" /></p>
