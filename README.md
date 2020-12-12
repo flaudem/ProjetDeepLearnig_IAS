@@ -7,10 +7,8 @@
 
 ## Table of Contents
 
-* [About the Project - global wheat detection](#about-the-project - global wheat detection)
+* [About the Project - global wheat detection](#About-the-project - global wheat detection)
 * [Description](#Description)
-  * [Installation](#installation)
-  * [Prerequisites](#prerequisites)
 * [Data](#Data)
   * [Understanding data](#Understanding data)
   * [Train images](#Train images)
