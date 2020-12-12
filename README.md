@@ -8,7 +8,7 @@
 # Global Wheat Detection
 <p align="center"><img src="ProjetDL_images/desc.png" /></p>
 
-**As you have seen the picture, the task of this competition is to predict the bounding boxes of wheat heads in different images. The images have a varying number of wheat heads, colors, orientations, and so on making the task more challenging.**
+**As you have seen the picture above, the task of this competition is to predict the bounding boxes of wheat heads in different images. The images have a varying number of wheat heads, colors, orientations, and so on making the task more challenging.**
 
 ## Description
 Most food products are made from wheat. Thanks to its popularity in use, wheat is widely studied in the agricultural field. Specialists are working on detecting an image of wheat ears collected from many wheat fields around the world. Described as spikes at the top of the plant containing the grain, the images of wheat ears are processed to estimate its size and density in different varieties. Farmers will be able to use the data to assess health and maturity when making management decisions in their fields.
@@ -37,7 +37,7 @@ CSV data is simple - image ID and image width and height are included. There is 
 Most of the images in the test set are hidden. A small subset of test images has been included for writing code.
 More details on the data acquisition and processes are available at https://arxiv.org/abs/2005.02162
 ### Understanding the data
-To further understand the task, let’s explore the wheat images and the associated bounding boxes:
+To further understand the task, let’s explore the wheat images and the associated bounding boxes:<br>
 **Train images :**
  * There is a total of 3422 unique train images 
  * There is a total of 3373 unique images with masks and some images don’t have any masks
@@ -48,7 +48,7 @@ To further understand the task, let’s explore the wheat images and the associa
  * There are 3 channels: R, G, B
  * The train images come from 7 different sources
  * There are some data quality issues: masks too big, or missing masks
- * The average bounding box area is 6843, the smallest is only 2, and the largest is 529788! 
+ * The average bounding box area is 6843, the smallest is only 2, and the largest is 529788! <br>
 **Test images :**
  * Only 10 images have been made public. 
  * There is a “real” test dataset that runs when you submit your inference kernel.
