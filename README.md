@@ -7,7 +7,7 @@
 
 ## Table of Contents
 
-* [About the Project - global wheat detection](#About-the-project - global wheat detection)
+* [About the Project - global wheat detection](#About the project - global wheat detection)
 * [Description](#Description)
 * [Data](#Data)
   * [Understanding data](#Understanding data)
@@ -16,7 +16,7 @@
 * [Metrics](#Metrics)
 * [Concepts](#Concepts)
 
-# About-the-project - global wheat detection
+# About the project - global wheat detection
 <p align="center"><img src="ProjetDL_images/desc.png" /></p>
 
 **As you have seen the picture above, the task of this competition is to predict the bounding boxes of wheat heads in different images. The images have a varying number of wheat heads, colors, orientations, and so on making the task more challenging.**
