@@ -6,15 +6,15 @@
 * Flaude BANZA
 
 ## Table of Contents
- * [About the project : global wheat detection](# About the project : global wheat detection)
- * [Description](# Description)
- * [Data](# Data)
-   * [Understandingdata](# Understandingdata)
-   * [Train images](# Train images)
-   * [Test images](# Test images)
- * [Metrics](# Metrics)
-   * [Understandingmetric](# Understandingmetric)
- * [Concepts](# Concepts)
+ * [About the project : global wheat detection](#Abouttheproject:globalwheatdetection)
+ * [Description](#Description)
+ * [Data](#Data)
+   * [Understanding data](#Understandingdata)
+   * [Train images](#Trainimages)
+   * [Test images](#Testimages)
+ * [Metrics](#Metrics)
+   * [Understanding metric](#Understandingmetric)
+ * [Concepts](#Concepts)
 
 # About the project : global wheat detection
 <p align="center"><img src="ProjetDL_images/desc.png" /></p>
