@@ -6,14 +6,15 @@
 * Flaude BANZA
 
 ## Table of Contents
- * [About the project : global wheat detection](#About the project : global wheat detection)
- * [Description](#Description)
- * [Data](#Data)
-   * [Understanding data](#Understanding data)
-   * [Train images](#Train images)
-   * [Test images](#Test images)
- * [Metrics](#Metrics)
- * [Concepts](#Concepts)
+ * [About the project : global wheat detection](# About the project : global wheat detection)
+ * [Description](# Description)
+ * [Data](# Data)
+   * [Understandingdata](# Understandingdata)
+   * [Train images](# Train images)
+   * [Test images](# Test images)
+ * [Metrics](# Metrics)
+   * [Understandingmetric](# Understandingmetric)
+ * [Concepts](# Concepts)
 
 # About the project : global wheat detection
 <p align="center"><img src="ProjetDL_images/desc.png" /></p>
@@ -92,7 +93,10 @@ The average precision of a single image is calculated as the mean of the above p
 
 When submitting the contest, contributors are asked to provide a confidence level for each bounding box. Bounding boxes will be evaluated in the order of their confidence levels in the process above. This means that bounding boxes with higher confidence will be checked first for matches with solutions, which determines which boxes are considered true and false positives.
 Finally, the score returned by the competition metric is the average taken over the individual average accuracies of each image in the test dataset.
-
+#### Understanding metric
+There are many components to this metric: first, we compute Jaccard/IoU scores, then for some threshold $t$, the wheat head is a TP if the IoU is above it, finally we compute the precision for this threshold. Then, average over the thresholds (given the AP) and over images (given mAP, mean average prediction).
+Thus, there are two levels of averaging: over the thresholds and then over the images.
+Notice that there are some edge-cases where the precision will be 0: no mask is predicted and there is at least one, a mask is predicted but there aren’t any.
 
 ## Concepts
 
