@@ -14,6 +14,7 @@
    * [Test images](#Testimages)
  * [Metrics](#Metrics)
    * [Understanding metric](#Understandingmetric)
+   * [More explanation about evaluation metric](#Moreexplanationaboutevaluationmetric)
  * [Concepts](#Concepts)
 
 # About the project : global wheat detection
@@ -97,7 +98,14 @@ Finally, the score returned by the competition metric is the average taken over 
 There are many components to this metric: first, we compute Jaccard/IoU scores, then for some threshold $t$, the wheat head is a TP if the IoU is above it, finally we compute the precision for this threshold. Then, average over the thresholds (given the AP) and over images (given mAP, mean average prediction).
 Thus, there are two levels of averaging: over the thresholds and then over the images.
 Notice that there are some edge-cases where the precision will be 0: no mask is predicted and there is at least one, a mask is predicted but there aren’t any.
-
+#### More explanation about evaluation metric
+The evaluation metric for object detection is quite tricky (when compared to object classification). Here is how it is computed:
+  * Predict the bounding box for each wheat head and give a confidence score
+  * Compute the intersection over union of each bounding box
+  * Re-order the predictions from highest score to lowest
+  * Now we can compute the recall and precision for the ranked bounding boxes
+  * From there, we can compute the average precision: this is the sum over 11 break points of the precision vs recall curve.
+  * Since we have only one class, this is also the mAP.
 ## Concepts
 
 * **MixUp**\
