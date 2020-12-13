@@ -1,4 +1,4 @@
-# DeepLearning Project
+# Global wheat detection project
 **This work is the solution of the second winner of a kaggle competition that we have included here as part of a student project whose participants are:**
 * Christelle AMOUGOU
 * Thanuja RATNASINGAM
@@ -6,7 +6,7 @@
 * Flaude BANZA
 
 ## Table of Contents
- * [About the project : global wheat detection](#Abouttheproject:globalwheatdetection)
+ * [About the project](#Abouttheproject)
  * [Description](#Description)
  * [Data](#Data)
    * [Understanding data](#Understandingdata)
